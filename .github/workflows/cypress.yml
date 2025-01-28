@@ -11,4 +11,4 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          spec: "cypress/e2e/loginAddProductCheckOutAssignment/loginAddProductCheckOutAssignPOMSpec.cy.js,cypress/e2e/signUpTestFlow/signUpUsingPOMSpec.cy,js"
+          spec: "cypress/e2e/loginAddProductCheckOutAssignment/loginAddProductCheckOutAssignPOMSpec.cy.js,cypress/e2e/signUpTestFlow/signUpUsingPOMSpec.cy.js"
