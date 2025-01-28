@@ -25,7 +25,6 @@ describe("Using xpath to locate the elements and generate the report", () => {
 
         cy.visit('/');
         cy.xpath("//h2[normalize-space()='Features Items']").contains('Features Items');
-        cy.xpath("//h2[normalize-space()='Features Items']").contains('Features Items');
 
         //Click on Sign Up Button
         cy.xpath("//a[@href='/login'][normalize-space()='Signup / Login']").click();
