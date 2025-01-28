@@ -1,0 +1,12 @@
+{
+    "userName": "standard_user",
+    "password": "secret_sauce",
+    "url": "https://www.saucedemo.com/v1/",
+    "urlHomePage": "https://www.saucedemo.com/v1/inventory.html",
+    "dropDownValue": "Price (low to high)",
+    "productName": "Sauce Labs Fleece Jacket",
+    "firstName": "Ashrith",
+    "lastName": "Achar",
+    "postalCode": "560050",
+    "orderPlacedText" : "THANK YOU FOR YOUR ORDER"
+}

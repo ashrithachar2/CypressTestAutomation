@@ -1,0 +1,17 @@
+{
+    "fileUploadUrl" :  "https://qa-automation-practice.netlify.app/file-upload.html",
+
+    "filePath" : "C:\\Users\\aachar\\OneDrive - Imagine Communications Corp\\Documents\\sampleTestData.txt",
+
+    "fixturPath"  : "mock.json",
+
+    "fileDownloadUrl" : "https://sample-videos.com/doc/Sample-doc-file-100kb.doc",
+
+    "downloadFolder" : "mydownloads",
+
+    "downloadFileName" :  "sampleDocument.doc",
+
+    "shadowDomUrl" : "https://practice.expandtesting.com/shadowdom"
+
+
+}

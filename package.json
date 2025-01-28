@@ -1,0 +1,24 @@
+{
+  "name": "cypresstestproject",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@faker-js/faker": "^9.4.0",
+    "cypress": "^13.17.0",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "cypress-xpath": "^2.0.1"
+  },
+  "dependencies": {
+    "cypress-downloadfile": "^1.2.4",
+    "cypress-fixture-faker": "^1.0.4",
+    "cypress-iframe": "^1.0.1",
+    "dayjs": "^1.11.13"
+  }
+}

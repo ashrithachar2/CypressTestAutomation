@@ -1,0 +1,20 @@
+{
+    "PUT": {
+        "email": "ashrithachar999@gmail.com",
+        "password": "#ash@123r",
+        "name": "The Automation Tester",
+        "first_name": "The Automation",
+        "last_name": "Achar",
+        "company": "TCS"
+    },
+    "GET": {
+        "productCategory": "Women"
+    },
+    "POST": {
+        "searchProduct": "Jeans"
+    },
+    "DELETE": {
+        "email": "ashrithachar999@gmail.com",
+        "password": "#ash@123r"
+    }
+}

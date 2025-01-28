@@ -1,0 +1,26 @@
+{
+    "name": "Ashrith Achar",
+    "signUpEmailID": "ashrith581@gmail.com",
+    "loginEmailID": "ashrith999@gmail.com",
+    "password": "#ash@123r",
+    "date": "15",
+    "month": "7",
+    "year": "2000",
+    "firstName": "Ashrith",
+    "lastName": "Achar",
+    "company": "CTS",
+    "address": "#53, Bakers Street, Hamilton",
+    "state": "Ohio",
+    "city": "Hamilton",
+    "zipcode": "980065",
+    "mobileNum": "7845987810",
+    "productName": "Men Tshirt",
+    "loginValidCredentials": {
+        "validUserName": "ashrith999@gmail.com",
+        "validPassword": "#ash@123r"
+    },
+    "loginInvalidCredentials": {
+        "inValidUserName": "testtester11@demo5.com",
+        "inValidPassword": "admin1234"
+    }
+}

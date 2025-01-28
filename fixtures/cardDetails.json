@@ -1,0 +1,9 @@
+{
+    "name": "Ashrith Achar",
+    "cardNumber": "1234 567 8910",
+    "vcc":"089",
+    "month": "07",
+    "year": "2090",
+    "orderPlacedTextValue": "Congratulations! Your order has been confirmed!",
+    "checkOutTextValue": "Checkout"
+}
