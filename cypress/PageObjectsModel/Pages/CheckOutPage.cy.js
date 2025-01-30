@@ -1,4 +1,5 @@
 import ProductPage from "./ProductPage.cy";
+import CheckoutTestData from "../../../fixtures/loginAddProductCheckoutTestData.json";
 
 class CheckOutPage {
 
@@ -14,28 +15,28 @@ class CheckOutPage {
         this.cart = 'path[fill="currentColor"]';
     }
     
-    clickCartVerifyProductClickCheckOut(productTitle) {
+    clickCartVerifyProductClickCheckOut() {
 
         cy.get(this.cart).click();
 
-        cy.get(this.productName).should("have.text", productTitle);
+        cy.get(this.productName).should("have.text",  CheckoutTestData.productName);
 
         cy.get(this.checkOutBtn).click();
 
     }
 
-    fillCheckOutInfoPlaceOrder(firstName, lastName, postalCode) {
+    fillCheckOutInfoPlaceOrder() {
 
-        cy.get(this.firstName).clear().type(firstName);
-        cy.get(this.lastName).clear().type(lastName);
-        cy.get(this.postalCode).clear().type(postalCode);
+        cy.get(this.firstName).clear().type(CheckoutTestData.firstName);
+        cy.get(this.lastName).clear().type(CheckoutTestData.lastName);
+        cy.get(this.postalCode).clear().type(CheckoutTestData.postalCode);
         cy.get(this.chkOutBtn).click();
         cy.get(this.finishBtn).click();
     }
 
-    fetchOrderPlacedSuccessfullText(orderPlacedText) {
+    fetchOrderPlacedSuccessfullText() {
 
-        cy.get(this.orderPlacedTextField).should("have.text", orderPlacedText);
+        cy.get(this.orderPlacedTextField).should("have.text", CheckoutTestData.orderPlacedText);
 
     }
 

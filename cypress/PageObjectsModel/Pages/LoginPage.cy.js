@@ -1,3 +1,5 @@
+import LoginTestData from "../../../fixtures/loginAddProductCheckoutTestData.json";
+
 class LoginPage {
 
     constructor() {
@@ -7,22 +9,22 @@ class LoginPage {
         this.loginBtn = "#login-button";
     }
 
-    launchUrl(url) {
-        cy.visit(url);
+    launchUrl() {
+        cy.visit(LoginTestData.url);
         cy.url().should("include", "www.saucedemo.com/v1/");
     }
 
-    loginUser(userName, password, url) {
+    loginUser() {
 
-        cy.session(([userName, password, url]), () => {
+        cy.session(([LoginTestData.userName, LoginTestData.password, LoginTestData.url]), () => {
 
-            this.launchUrl(url)
+            this.launchUrl(LoginTestData.url)
 
-            cy.get(this.uName).as("userNameField").clear().type(userName);
-            cy.get("@userNameField").should("have.value", userName);
+            cy.get(this.uName).as("userNameField").clear().type(LoginTestData.userName);
+            cy.get("@userNameField").should("have.value", LoginTestData.userName);
 
-            cy.get(this.pass).as("passwordField").clear().type(password);
-            cy.get("@passwordField").should("have.value", password);
+            cy.get(this.pass).as("passwordField").clear().type(LoginTestData.password);
+            cy.get("@passwordField").should("have.value", LoginTestData.password);
             cy.get(this.loginBtn).should("be.visible").click();
 
         },

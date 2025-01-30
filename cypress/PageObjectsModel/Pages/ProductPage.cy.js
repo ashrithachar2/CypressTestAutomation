@@ -1,4 +1,6 @@
 import LoginPage from "./LoginPage.cy";
+import ProductTestData from "../../../fixtures/loginAddProductCheckoutTestData.json";
+
 
 class ProductPage {
 
@@ -15,13 +17,20 @@ class ProductPage {
         this.productName = ".inventory_item_name";
     }
 
-    clickDropDownToCheckAscendingOrder(dropdownValue, urlHomePage) {
+    launchHomePageUrl() {
 
-        this.login.launchUrl(urlHomePage);
+        cy.visit(ProductTestData.urlHomePage);
+        cy.url().should("include", "/v1/inventory.html");
 
-        cy.get(this.sortDropDown).should("be.visible").select(dropdownValue);
+    }
 
-        cy.get(this.itemPrices ).then(($priceValues) => {
+    clickDropDownToCheckAscendingOrder() {
+
+        this.launchHomePageUrl();
+
+        cy.get(this.sortDropDown).should("be.visible").select(ProductTestData.dropDownValue);
+
+        cy.get(this.itemPrices).then(($priceValues) => {
 
             let actualPriceOrder = [...$priceValues].map((actualPriceOrder) =>
 
@@ -32,9 +41,9 @@ class ProductPage {
             cy.log("Actual Price Order is: " + actualPriceOrder);
             cy.log("Expected Price Sort order is: " + sortedPriceOrder);
 
-            expect(actualPriceOrder).to.deep.equal(sortedPriceOrder);      
+            expect(actualPriceOrder).to.deep.equal(sortedPriceOrder);
         })
-        cy.get(this.lastAddToCart).then(($addToCart)=>{
+        cy.get(this.lastAddToCart).then(($addToCart) => {
 
             cy.wrap($addToCart).last().click();
 
