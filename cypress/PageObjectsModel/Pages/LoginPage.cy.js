@@ -1,5 +1,6 @@
 import LoginTestData from "../../../fixtures/loginAddProductCheckoutTestData.json";
 
+
 class LoginPage {
 
     constructor() {
