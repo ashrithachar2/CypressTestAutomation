@@ -1,8 +1,8 @@
 describe("API Validations", () => {
 
-    beforeEach(()=>{
+    beforeEach(() => {
 
-        cy.fixture("../../fixtures/networkCallTestData.json").then(function(networkCallTestData){
+        cy.fixture("../../fixtures/networkCallTestData.json").then(function (networkCallTestData) {
 
             this.networkCallTestData = networkCallTestData;
 
@@ -11,12 +11,14 @@ describe("API Validations", () => {
     })
 
 
-    it("GET Method", function (){
+    it("GET Method", function () {
 
         cy.request({
 
             method: "GET",
-            url: "https://automationexercise.com/api/productsList"
+
+            url: `${Cypress.env('apiBaseUrl')}/productsList`,
+
 
         }).then((getResponseBody) => {
 
@@ -32,12 +34,12 @@ describe("API Validations", () => {
         })
     })
 
-    it("POST Method", function ()  {
+    it("POST Method", function () {
 
         cy.request({
 
             method: "POST",
-            url: "https://automationexercise.com/api/searchProduct",
+            url: `${Cypress.env('apiBaseUrl')}/searchProduct`,
             form: true,
             body: {
                 "search_product": "Jeans"
@@ -56,7 +58,7 @@ describe("API Validations", () => {
         })
     })
 
-    it("PUT Method", function()  {
+    it("PUT Method", function () {
 
         //Using fixture file to derive the data
 
@@ -65,7 +67,7 @@ describe("API Validations", () => {
             cy.request({
 
                 method: "PUT",
-                url: "https://automationexercise.com/api/updateAccount",
+                url: `${Cypress.env('apiBaseUrl')}/updateAccount`,
                 form: true,
                 body: this.networkCallTestData.PUT
 
@@ -82,16 +84,16 @@ describe("API Validations", () => {
 
     })
 
-    it.skip("DELETE Method", function()  {
+    it.skip("DELETE Method", function () {
 
         cy.request({
 
             method: "DELETE",
-            url: "https://automationexercise.com/api/deleteAccount",
+            url: `${Cypress.env('apiBaseUrl')}/deleteAccount`,
             form: true,
             body: this.networkCallTestData.DELETE
-                
-            
+
+
 
         }).then((getResponseBody) => {
 

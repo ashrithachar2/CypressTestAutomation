@@ -8,6 +8,13 @@ module.exports = defineConfig({
 
 
   e2e: {
+
+    env :{
+
+      apiBaseUrl : "https://automationexercise.com/api"
+
+    },
+
     baseUrl :  "https://www.automationexercise.com/",
 
     chromeWebSecurity : false,
